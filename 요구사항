@@ -1,0 +1,53 @@
+엔티티 요구사항
+User :
+Identified by a unique UserID.
+Can have an address, which is composed of Dong, Si, and Gu.
+Can have a preference for cuisine.
+
+Review:
+Identified by a unique ReviewID.
+Contains a title, content, and rating.
+
+Recipe:
+Identified by a unique RecipeID.
+Includes description, like count, and cook time.
+
+Refrigerator:
+Has attributes such as name, quantity of items, and the date it was created.
+
+Ingredient:
+Identified by an IngredientID.
+Contains details like type, name, and calories.
+
+Process:
+Identified by a ProcessID.
+Includes a description and a step number.
+
+  
+카디널리티 요구사항
+User-Review
+A user can write many reviews (N).
+Each review is written by one user (1).
+User-Recipe
+A user can search for many recipes (N).
+A recipe can be searched by one user (1).
+User-Refrigerator
+A user can has one refrigerator (1).
+A refrigerator can be had by one user (1).
+Ingredient-Refrigerator
+A Ingredient stores many recipes (N).
+A recipe can be stored in many Ingredientes (N).
+Recipe-Ingredient
+A recipe needs one or many ingredients (N).
+An ingredient can be needed by one or many recipes (N).
+Recipe-Process
+A recipe follows one processes (N).
+A process can be followed by one recipes (N).
+Recipe-Review
+A recipe can has many review (N).
+A review can be had one recipe (1).
+
+참여도 요구사항
+Recipes must have Ingredients.
+Recipes must be made with a Cuisine.
+Recipes must be followed by a Process.
